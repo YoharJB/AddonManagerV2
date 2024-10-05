@@ -20,7 +20,7 @@
         "Hot": "🔥"
     },
     {
-        "name": "MogIt_MasterWow",
+        "name": "MogIt",
         "githubRepo": "https://github.com/PentSec/MogIt_MasterWow",
         "imageUrl": "https://github.com/PentSec/MogIt_MasterWow/blob/main/mogit.png?raw=true",
         "addonType": "Transmog",
@@ -50,7 +50,7 @@
         "Hot": ""
     },
     {
-        "name": "Skada-WoTLK",
+        "name": "Skada",
         "githubRepo": "https://github.com/PentSec/Skada-WoTLK",
         "imageUrl": "https://media.forgecdn.net/avatars/thumbnails/62/287/256/256/636142135917313783.png",
         "addonType": "Utility",
@@ -60,7 +60,7 @@
         "Hot": ""
     },
     {
-        "name": "Talented_WoTLK",
+        "name": "Talented",
         "githubRepo": "https://github.com/bkader/Talented_WoTLK",
         "imageUrl": "https://media.forgecdn.net/avatars/thumbnails/228/151/256/256/637048648466465610.png",
         "addonType": "Utility",
@@ -70,7 +70,7 @@
         "Hot": ""
     },
     {
-        "name": "ElvUI-WOTLK",
+        "name": "ElvUI",
         "githubRepo": "https://github.com/YoharJB/ElvUI-WOTLK",
         "imageUrl": "https://i.gyazo.com/4c42aa8f405e5dcf0f27808547cb5a5e.png",
         "addonType": "UI",
@@ -80,7 +80,7 @@
         "Hot": ""
     },
     {
-        "name": "WotLK-Auctionator",
+        "name": "Auctionator",
         "githubRepo": "https://github.com/alchem1ster/WotLK-Auctionator",
         "imageUrl": "https://wow.zamimg.com/images/wow/icons/large/inv_10_fishing_dragonislescoins_gold.jpg",
         "addonType": "Utility",
@@ -90,7 +90,7 @@
         "Hot": ""
     },
     {
-        "name": "TradeSkillMaster_WOTLK",
+        "name": "TradeSkillMaster",
         "githubRepo": "https://github.com/YoharJB/TradeSkillMaster_WOTLK",
         "imageUrl": "https://www.tradeskillmaster.com/apple-touch-icon-180x180.png",
         "addonType": "Utility",
@@ -110,7 +110,7 @@
         "Hot": ""
     },
     {
-        "name": "WeakAuras-WotLK",
+        "name": "WeakAuras",
         "githubRepo": "https://github.com/Bunny67/WeakAuras-WotLK",
         "imageUrl": "https://media.forgecdn.net/avatars/thumbnails/62/782/256/256/636142194921799650.png",
         "addonType": "Utility",
@@ -120,7 +120,7 @@
         "Hot": ""
     },
     {
-        "name": "TidyPlates_WoTLK",
+        "name": "TidyPlates",
         "githubRepo": "https://github.com/bkader/TidyPlates_WoTLK",
         "imageUrl": "https://media.forgecdn.net/avatars/thumbnails/55/451/256/256/636141352218161611.jpg",
         "addonType": "UI",
@@ -130,7 +130,7 @@
         "Hot": ""
     },
     {
-        "name": "RUF-WoTLK",
+        "name": "RUF",
         "githubRepo": "https://github.com/bkader/RUF-WoTLK",
         "imageUrl": "https://user-images.githubusercontent.com/4732702/136260639-7f31e51f-39c3-418d-85cc-230e72b1cdad.png",
         "addonType": "Utility",
@@ -150,7 +150,7 @@
         "Hot": ""
     },
     {
-        "name": "Carbonite_WOTLK",
+        "name": "Carbonite",
         "githubRepo": "https://github.com/YoharJB/Carbonite_WOTLK",
         "imageUrl": "https://github.com/YoharJB/Carbonite_WOTLK/blob/main/636141463188861085.jpg?raw=true",
         "addonType": "Utility",
@@ -190,7 +190,7 @@
         "Hot": ""
     },
     {
-        "name": "Details-WotLK",
+        "name": "Details",
         "githubRepo": "https://github.com/NoM0Re/Details-WotLK",
         "imageUrl": "https://media.forgecdn.net/attachments/215/323/mainwindow.png",
         "addonType": "Utility",
@@ -290,7 +290,7 @@
         "Hot": ""
     },
     {
-        "name": "OmniCC_WOTLK",
+        "name": "OmniCC",
         "githubRepo": "https://github.com/YoharJB/OmniCC_WOTLK",
         "imageUrl": "https://media.forgecdn.net/avatars/thumbnails/137/516/256/256/636515481273843403.jpeg",
         "addonType": "Utility",
@@ -350,7 +350,7 @@
         "Hot": ""
     },
     {
-        "name": "Bagnon_WOTLK",
+        "name": "Bagnon",
         "githubRepo": "https://github.com/YoharJB/Bagnon_WOTLK",
         "imageUrl": "https://media.forgecdn.net/avatars/thumbnails/647/705/256/256/638048338012580367.png",
         "addonType": "Utility",

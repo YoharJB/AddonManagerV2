@@ -1,0 +1,39 @@
+name: Asignar UUIDs Condicionalmente a Múltiples JSON
+
+on:
+  push:
+    paths:
+      - 'LK/lichking.json'
+      - 'Cata/cataclysm.json'
+      - 'Panda/pandaria.json'
+  workflow_dispatch:  # Permite ejecutar el workflow manualmente si es necesario
+
+jobs:
+  assign-uuids:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout del repositorio
+        uses: actions/checkout@v3
+
+      - name: Configurar Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'  # Puedes especificar la versión que prefieras
+
+      - name: Instalar dependencias
+        run: npm install uuid
+
+      - name: Ejecutar script para asignar UUIDs
+        run: node assign-uuids.js
+
+      - name: Configurar Git
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+
+      - name: Commit y Push si hay cambios
+        run: |
+          git add LK/lichking.json Cata/cataclysm.json Panda/pandaria.json
+          git diff --cached --exit-code || git commit -m "Asignar UUIDs a objetos sin UUID"
+          git push

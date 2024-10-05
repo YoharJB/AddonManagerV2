@@ -1,22 +1,24 @@
 [
-    {
-        "name": "ElvUI-4.3.4",
-        "githubRepo": "https://github.com/ElvUI-Cataclysm/ElvUI-4.3.4",
-        "imageUrl": "https://avatars.githubusercontent.com/u/25153064?s=48&v=4",
-        "addonType": "UI",
-        "author": "Sitoz",
-        "description": "ElvUI for World of Warcraft - Cataclysm (4.3.4)",
-        "lastCommitDate": "2021-14-12",
-        "Hot": ""
-    },
-    {
-        "name": "ACP-4.3.4",
-        "githubRepo": "https://github.com/YoharJB/ACP-4.3.4",
-        "imageUrl": "https://github.com/YoharJB/ACP/blob/main/images.jpg?raw=true",
-        "addonType": "Utility",
-        "author": "Github",
-        "description": "Addon control panel for Cataclysm 4.3.4, Control ur addons ingame without logout.",
-        "lastCommitDate": "2024-06-07",
-        "Hot": ""
-    }
+  {
+    "name": "ElvUI-4.3.4",
+    "githubRepo": "https://github.com/ElvUI-Cataclysm/ElvUI-4.3.4",
+    "imageUrl": "https://avatars.githubusercontent.com/u/25153064?s=48&v=4",
+    "addonType": "UI",
+    "author": "Sitoz",
+    "description": "ElvUI for World of Warcraft - Cataclysm (4.3.4)",
+    "lastCommitDate": "2021-14-12",
+    "Hot": "",
+    "uuid": "f3e30b27-568f-4d15-951a-d0ab874f08ee"
+  },
+  {
+    "name": "ACP-4.3.4",
+    "githubRepo": "https://github.com/YoharJB/ACP-4.3.4",
+    "imageUrl": "https://github.com/YoharJB/ACP/blob/main/images.jpg?raw=true",
+    "addonType": "Utility",
+    "author": "Github",
+    "description": "Addon control panel for Cataclysm 4.3.4, Control ur addons ingame without logout.",
+    "lastCommitDate": "2024-06-07",
+    "Hot": "",
+    "uuid": "9072038e-346a-4e9a-950c-0a9956d662c3"
+  }
 ]

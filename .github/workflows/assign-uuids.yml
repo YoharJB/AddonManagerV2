@@ -16,8 +16,7 @@ jobs:
       - name: Checkout del repositorio
         uses: actions/checkout@v3
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          fetch-depth: 0  # Necesario para permitir push
+          fetch-depth: 0  # Necesario para permitir push y crear ramas
 
       - name: Configurar Node.js
         uses: actions/setup-node@v3
@@ -35,18 +34,18 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
 
-      - name: Commit y Push si hay cambios
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Commit si hay cambios
         run: |
-          # Añadir los archivos JSON al staging
           git add LK/lichking.json Cata/cataclysm.json Panda/pandaria.json
-          
-          # Verificar si hay cambios y hacer commit si es necesario
           git diff --cached --exit-code || git commit -m "Asignar UUIDs a objetos sin UUID"
-          
-          # Realizar pull con rebase para actualizar la rama local
-          git pull --rebase origin main
-          
-          # Hacer push de los cambios
-          git push https://x-access-token:${GITHUB_TOKEN}@github.com/${{ github.repository }}.git HEAD:${{ github.ref }} || { echo "Git push falló"; exit 1; }
+
+      - name: Crear Pull Request
+        uses: peter-evans/create-pull-request@v5
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: "Asignar UUIDs a objetos sin UUID"
+          branch: assign-uuids-${{ github.run_id }}
+          title: "Asignar UUIDs a objetos sin UUID"
+          body: "Este Pull Request asigna UUIDs a los objetos en los archivos JSON."
+          labels: automatic-uuid-assignment
+          # reviewers: tu-usuario  # Opcional: Asigna revisores

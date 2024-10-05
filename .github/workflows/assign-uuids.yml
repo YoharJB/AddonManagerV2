@@ -39,6 +39,14 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
+          # Añadir los archivos JSON al staging
           git add LK/lichking.json Cata/cataclysm.json Panda/pandaria.json
+          
+          # Verificar si hay cambios y hacer commit si es necesario
           git diff --cached --exit-code || git commit -m "Asignar UUIDs a objetos sin UUID"
+          
+          # Realizar pull con rebase para actualizar la rama local
+          git pull --rebase origin main
+          
+          # Hacer push de los cambios
           git push https://x-access-token:${GITHUB_TOKEN}@github.com/${{ github.repository }}.git HEAD:${{ github.ref }} || { echo "Git push falló"; exit 1; }

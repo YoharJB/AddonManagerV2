@@ -15,11 +15,14 @@ jobs:
     steps:
       - name: Checkout del repositorio
         uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0  # Necesario para permitir push
 
       - name: Configurar Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '20'  # Puedes especificar la versión que prefieras
+          node-version: '20'  # Actualiza a la versión 20 para evitar la advertencia
 
       - name: Instalar dependencias
         run: npm install uuid
@@ -33,7 +36,9 @@ jobs:
           git config --local user.name "GitHub Action"
 
       - name: Commit y Push si hay cambios
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           git add LK/lichking.json Cata/cataclysm.json Panda/pandaria.json
           git diff --cached --exit-code || git commit -m "Asignar UUIDs a objetos sin UUID"
-          git push
+          git push https://x-access-token:${GITHUB_TOKEN}@github.com/${{ github.repository }}.git HEAD:${{ github.ref }} || { echo "Git push falló"; exit 1; }

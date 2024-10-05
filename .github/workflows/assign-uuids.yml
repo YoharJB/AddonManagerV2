@@ -19,7 +19,7 @@ jobs:
       - name: Configurar Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '16'  # Puedes especificar la versión que prefieras
+          node-version: '20'  # Puedes especificar la versión que prefieras
 
       - name: Instalar dependencias
         run: npm install uuid

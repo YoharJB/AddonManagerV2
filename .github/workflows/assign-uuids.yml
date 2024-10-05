@@ -6,6 +6,7 @@ on:
       - 'LK/lichking.json'
       - 'Cata/cataclysm.json'
       - 'Panda/pandaria.json'
+  workflow_dispatch:  # Permite ejecutar el workflow manualmente si es necesario
 
 jobs:
   assign-uuids:
@@ -15,12 +16,12 @@ jobs:
       - name: Checkout del repositorio
         uses: actions/checkout@v3
         with:
-          fetch-depth: 0  # Necesario para permitir crear ramas
+          fetch-depth: 0  # Necesario para crear ramas y PRs
 
       - name: Configurar Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '20'
+          node-version: '20'  # Versión actualizada de Node.js
 
       - name: Instalar dependencias
         run: npm install uuid
@@ -28,11 +29,22 @@ jobs:
       - name: Ejecutar script para asignar UUIDs
         run: node assign-uuids.js
 
-      - name: Commit y creación de Pull Request
+      - name: Configurar Git
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+
+      - name: Commit si hay cambios
+        run: |
+          git add LK/lichking.json Cata/cataclysm.json Panda/pandaria.json
+          git diff --cached --exit-code || git commit -m "Asignar UUIDs a objetos sin UUID"
+
+      - name: Crear Pull Request
         uses: peter-evans/create-pull-request@v5
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           commit-message: "Asignar UUIDs a objetos sin UUID"
           branch: assign-uuids-${{ github.run_id }}
           title: "Asignar UUIDs a JSON"
-          body: "Este PR asigna UUIDs a los objetos en los archivos JSON."
+          body: "Este Pull Request asigna UUIDs a los objetos en los archivos JSON."
+          labels: automatic-uuid-assignment

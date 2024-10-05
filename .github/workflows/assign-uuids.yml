@@ -1,4 +1,4 @@
-name: Asignar UUIDs a JSON
+name: Asignar UUIDs Condicionalmente a Múltiples JSON
 
 on:
   push:
@@ -16,12 +16,13 @@ jobs:
       - name: Checkout del repositorio
         uses: actions/checkout@v3
         with:
-          fetch-depth: 0  # Necesario para crear ramas y PRs
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0  # Necesario para permitir push
 
       - name: Configurar Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '20'  # Versión actualizada de Node.js
+          node-version: '20'  # Actualiza a la versión 20 para evitar la advertencia
 
       - name: Instalar dependencias
         run: npm install uuid
@@ -34,17 +35,10 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
 
-      - name: Commit si hay cambios
+      - name: Commit y Push si hay cambios
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           git add LK/lichking.json Cata/cataclysm.json Panda/pandaria.json
           git diff --cached --exit-code || git commit -m "Asignar UUIDs a objetos sin UUID"
-
-      - name: Crear Pull Request
-        uses: peter-evans/create-pull-request@v5
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          commit-message: "Asignar UUIDs a objetos sin UUID"
-          branch: assign-uuids-${{ github.run_id }}
-          title: "Asignar UUIDs a JSON"
-          body: "Este Pull Request asigna UUIDs a los objetos en los archivos JSON."
-          labels: automatic-uuid-assignment
+          git push https://x-access-token:${GITHUB_TOKEN}@github.com/${{ github.repository }}.git HEAD:${{ github.ref }} || { echo "Git push falló"; exit 1; }

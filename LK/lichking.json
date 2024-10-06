@@ -9,5 +9,27 @@
         "description": "Skada for WoTLK, Revisited. If you have issues, suggestions or ideas, feel free to use GitHub issues or to report them on Discord.",
         "lastCommitDate": "2024-03-23",
         "Hot": ""
-    }
+    },
+    {
+        "name": "pw_lossofcontrol",
+        "folders": ["pw_lossofcontrol"],
+        "githubRepo": "https://github.com/s0h2x/pw_lossofcontrol",
+        "imageUrl": "https://user-images.githubusercontent.com/33549022/204646710-3ec5da44-fb66-4edf-b9b8-c07233ff9aae.png",
+        "addonType": "UI",
+        "author": "s0h2x",
+        "description": "Dragonflight Style  Makes it easy to see the duration of crowd control spells by displaying them on screen.",
+        "lastCommitDate": "2024-12-4",
+        "Hot": ""
+    },
+    {
+        "name": "pw_unitframes",
+        "folders": ["pw_unitframes"],
+        "githubRepo": "https://github.com/s0h2x/pw_unitframes",
+        "imageUrl": "https://www.wowisclassic.com/media/CACHE/images/wow/addons/unitframesimproved/b133b95a-3805-4efc-949c-50921313c410/cf64a8e8b846b088aa325f52178f3bc8.png",
+        "addonType": "UI",
+        "author": "s0h2x",
+        "description": "Dragonflight Style  Includes: frames: player, target, focus, target of target, focus of target, party, party-targets, arena, arena-targets elements: castbars, arena trinkets, auras, cooldowns, class portraits",
+        "lastCommitDate": "2024-12-4",
+        "Hot": ""
+    },
 ]

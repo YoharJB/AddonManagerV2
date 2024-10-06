@@ -57,6 +57,7 @@
   {
     "name": "Skada-WoTLK",
     "githubRepo": "https://github.com/PentSec/Skada-WoTLK",
+    "folders": ["Skada", "SkadaImprovement", "SkadaStorage"],
     "imageUrl": "https://media.forgecdn.net/avatars/thumbnails/62/287/256/256/636142135917313783.png",
     "addonType": "Utility",
     "author": "Bkader",

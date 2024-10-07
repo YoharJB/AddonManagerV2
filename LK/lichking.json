@@ -22,9 +22,9 @@
         "Hot": ""
     },
     {
-        "name": "pw_unitframes",
-        "folders": ["pw_unitframes"],
-        "githubRepo": "https://github.com/s0h2x/pw_unitframes",
+        "name": "AckisRecipeList",
+        "folders": ["AckisRecipeList"],
+        "githubRepo": "https://github.com/MaddonsManager/AckisRecipeList",
         "imageUrl": "https://www.wowisclassic.com/media/CACHE/images/wow/addons/unitframesimproved/b133b95a-3805-4efc-949c-50921313c410/cf64a8e8b846b088aa325f52178f3bc8.png",
         "addonType": "UI",
         "author": "s0h2x",

@@ -1,6 +1,6 @@
 [
     {
-        "name": "Skada-WoTLK",
+        "name": "Skada",
         "folders": ["Skada", "SkadaImprovement", "SkadaStorage"],
         "githubRepo": "https://github.com/PentSec/Skada-WoTLK",
         "imageUrl": "https://media.forgecdn.net/avatars/thumbnails/62/287/256/256/636142135917313783.png",
